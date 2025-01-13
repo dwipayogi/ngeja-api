@@ -8,15 +8,14 @@ datasource db {
 }
 
 model User {
-  id       String     @id @default(cuid())
-  username String     @unique
-  email    String     @unique
-  number   String     @unique
-  exp      Int        @default(0)
-  image    String?
+  id        String     @id @default(cuid())
+  username  String     @unique
+  email     String     @unique
+  exp       Int        @default(0)
+  image     String?
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt @default(now())
-  progress Progress[]
+  progress  Progress[]
 }
 
 model Progress {
