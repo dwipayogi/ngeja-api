@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import prisma from "../../client"
+import prisma from "../../client";
 
 export const createUser = async (req: Request, res: Response) => {
   const { username, email } = req.body;
@@ -49,7 +49,7 @@ export const updateUser = async (req: Request, res: Response) => {
     },
   });
   res.json(user);
-}
+};
 
 export const deleteUser = async (req: Request, res: Response) => {
   const username = req.params.name as string;
@@ -57,4 +57,4 @@ export const deleteUser = async (req: Request, res: Response) => {
     where: { username },
   });
   res.json(user);
-}
+};

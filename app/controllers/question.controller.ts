@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import prisma from "../../client"
+import prisma from "../../client";
 
 export const createQuestion = async (req: Request, res: Response) => {
   const { number, question, answer, level, explanation } = req.body;
