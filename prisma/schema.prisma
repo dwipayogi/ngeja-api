@@ -46,7 +46,7 @@ model Question {
   id          String     @id @default(cuid())
   level       Level      @relation(fields: [levelId], references: [id])
   levelId     String
-  numver      Int
+  number      Int
   question    String
   answer      String
   explanation String
